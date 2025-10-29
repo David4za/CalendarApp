@@ -10,10 +10,10 @@ if "events" not in st.session_state:
     st.session_state.events = []
     
 st.subheader("Add Event")
-col1, col2 = st.columns(2)
+col1 = st.columns(1)
 with col1:
-    event_name = st.text_input("Event Name","Erev Shabbat")
-    event_description = st.text_area("Event description", "Rabbi x")
+    event_name = st.text_input("Event Name","")
+    event_description = st.text_area("Event description", "")
 
 selected_date = st.date_input("Select date", datetime.today())
 start_time = st.time_input("Select start time", value=datetime.strptime("18:30", "%H:%M").time())
